@@ -1,5 +1,5 @@
 
-# SceneKit Performance Bug - Catalyst / M1 Apple Silicon
+# FB8939087 - SceneKit Performance Severely Drops on Catalyst / M1 Apple Silicon in native mode
 
 ## Sample content:
 - Default Game Template for iOS, configured with macOS deployment
