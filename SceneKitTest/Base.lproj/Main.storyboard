@@ -1,22 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NSa-2X-e9R">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="SceneKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="273"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </sceneKitView>
+                    <navigationItem key="navigationItem" id="H57-Qa-1Xa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-351" y="66"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aVl-Wl-8tW">
+            <objects>
+                <viewController id="NSa-2X-e9R" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NDz-5s-S6Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zP-JS-lL6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="272.5"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="embed" id="kNO-bW-IaT"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36H-IG-7s7">
+                                <rect key="frame" x="0.0" y="316.5" width="414" height="273"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="embed" id="uRl-Ep-SIs"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebV-6V-xN2">
+                                <rect key="frame" x="0.0" y="589.5" width="414" height="272.5"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="embed" id="cOc-s4-P0h"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dIz-VA-6Wx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dIz-VA-6Wx" firstAttribute="trailing" secondItem="ebV-6V-xN2" secondAttribute="trailing" id="B44-jb-WjC"/>
+                            <constraint firstItem="dIz-VA-6Wx" firstAttribute="bottom" secondItem="ebV-6V-xN2" secondAttribute="bottom" id="Gp1-uk-g45"/>
+                            <constraint firstItem="6zP-JS-lL6" firstAttribute="height" secondItem="36H-IG-7s7" secondAttribute="height" id="Kh4-06-ymL"/>
+                            <constraint firstItem="36H-IG-7s7" firstAttribute="bottom" secondItem="ebV-6V-xN2" secondAttribute="top" id="MEr-GJ-bLU"/>
+                            <constraint firstItem="36H-IG-7s7" firstAttribute="leading" secondItem="dIz-VA-6Wx" secondAttribute="leading" id="OJS-00-d1n"/>
+                            <constraint firstItem="dIz-VA-6Wx" firstAttribute="trailing" secondItem="6zP-JS-lL6" secondAttribute="trailing" id="Rjt-TH-WWO"/>
+                            <constraint firstItem="36H-IG-7s7" firstAttribute="top" secondItem="6zP-JS-lL6" secondAttribute="bottom" id="WLD-s3-Gab"/>
+                            <constraint firstItem="ebV-6V-xN2" firstAttribute="leading" secondItem="dIz-VA-6Wx" secondAttribute="leading" id="cox-7s-Aih"/>
+                            <constraint firstItem="dIz-VA-6Wx" firstAttribute="trailing" secondItem="36H-IG-7s7" secondAttribute="trailing" id="fs0-z7-2Vb"/>
+                            <constraint firstItem="6zP-JS-lL6" firstAttribute="leading" secondItem="dIz-VA-6Wx" secondAttribute="leading" id="jqz-4u-1F2"/>
+                            <constraint firstItem="6zP-JS-lL6" firstAttribute="top" secondItem="dIz-VA-6Wx" secondAttribute="top" id="rZ0-6l-ctt"/>
+                            <constraint firstItem="ebV-6V-xN2" firstAttribute="height" secondItem="36H-IG-7s7" secondAttribute="height" id="yfn-7L-5Cl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azp-8F-Ohb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="54"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uRl-Ep-SIs"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
